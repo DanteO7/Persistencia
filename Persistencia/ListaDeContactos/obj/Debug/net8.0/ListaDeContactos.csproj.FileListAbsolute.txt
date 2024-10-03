@@ -1,0 +1,15 @@
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\bin\Debug\net8.0\ListaDeContactos.exe
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\bin\Debug\net8.0\ListaDeContactos.deps.json
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\bin\Debug\net8.0\ListaDeContactos.runtimeconfig.json
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\bin\Debug\net8.0\ListaDeContactos.dll
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\bin\Debug\net8.0\ListaDeContactos.pdb
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\ListaDeContactos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\ListaDeContactos.AssemblyInfoInputs.cache
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\ListaDeContactos.AssemblyInfo.cs
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\ListaDeContactos.csproj.CoreCompileInputs.cache
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\ListaDeContactos.sourcelink.json
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\ListaDeContactos.dll
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\refint\ListaDeContactos.dll
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\ListaDeContactos.pdb
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\ListaDeContactos.genruntimeconfig.cache
+C:\Users\dorsettimartinez\Desktop\asd\Persistencia\Persistencia\ListaDeContactos\obj\Debug\net8.0\ref\ListaDeContactos.dll
