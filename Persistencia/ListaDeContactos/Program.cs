@@ -101,7 +101,7 @@ static class Sistema
         using StreamWriter writer = new StreamWriter(archivo, true);
         writer.WriteLine($"{contacto.Nombre}|{contacto.NumeroTelefono}|{contacto.CorreoElectronico}");
         writer.WriteLine(separadorContactos);
-    }
+    } 
 }
 
 class Program
@@ -143,3 +143,23 @@ class Program
         while (opcion != 3);
     }
 }
+/*public void GuardarDatos<T>(string archivo, T entidad) where T : class
+{
+    if (File.Exist(archivo))
+    {
+        using StreamWriter writer = new StreamWriter(archivo, true)
+        writer.WriteLine(entidad);
+    }
+}
+
+public void GuardarDatos<T>(string archivo, List<T> entidades) where T : class
+{
+    if (File.Exist(archivo))
+    {
+        using StreamWriter writer = new StreamWriter(archivo, true)
+        foreach(var e in entidades)
+        {
+            writer.WriteLine(e);
+        } 
+    }
+}*/
