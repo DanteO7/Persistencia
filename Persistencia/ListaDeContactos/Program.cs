@@ -1,4 +1,4 @@
-﻿class Contacto
+class Contacto
 {
     public string Nombre { get; set; }
     public int NumeroTelefono { get; set; }
@@ -13,7 +13,7 @@
 
     public override string ToString()
     {
-        return $"Nombre: {Nombre}, Teléfono: {NumeroTelefono}, Correo Electrónico: {CorreoElectronico}";
+        return $"{Nombre}-{NumeroTelefono}-{CorreoElectronico}";
     }
 }
 
@@ -34,20 +34,26 @@ static class Sistema
 
         Console.Write("Ingrese el correo electrónico del contacto: ");
         string correoContacto = Console.ReadLine();
-        
-        foreach(var c in ListaContactos)
+
+        foreach (var c in ListaContactos)
         {
-            if(c.Nombre == nombreContacto && c.NumeroTelefono == telefonoContacto)
+            if (c.Nombre == nombreContacto && c.NumeroTelefono == telefonoContacto)
             {
                 Console.WriteLine("Este contacto ya existe.");
                 return;
             }
         }
-        
+
         Contacto contacto = new Contacto(nombreContacto, telefonoContacto, correoContacto);
         ListaContactos.Add(contacto);
-        Sistema.GuardarContacto(contacto);
+        Archivo.GuardarDatos(archivo, contacto);
         Console.WriteLine("Contacto agregado correctamente.");
+    }
+
+    public static void AgregarContacto(string[] partes)
+    {
+        Contacto contacto = new Contacto(partes[0], int.Parse(partes[1]), partes[2]);
+        ListaContactos.Add(contacto);
     }
 
     public static void MostrarContactos()
@@ -74,41 +80,30 @@ static class Sistema
 
             Contacto contactoActual = null;
 
-            while((linea = reader.ReadLine()) != null)
+            while ((linea = reader.ReadLine()) != null)
             {
-                if(linea == separadorContactos)
-                {
-                    contactoActual = null;
-                }
-                else
-                {
-                    string[] partes = linea.Split("|");
+                string[] partes = linea.Split("-");
 
-                    string nombre = partes[0];
-                    int telefono = int.Parse(partes[1]);
-                    string correo = partes[2];
+                string nombre = partes[0];
+                int telefono = int.Parse(partes[1]);
+                string correo = partes[2];
 
-                    Contacto contacto = new Contacto(nombre, telefono, correo);
-                    ListaContactos.Add(contacto);
-                }
+                Contacto contacto = new Contacto(nombre, telefono, correo);
+
+                ListaContactos.Add(contacto);
             }
             Console.WriteLine("Datos cargados correctamente.");
         }
     }
-
-    public static void GuardarContacto(Contacto contacto)
-    {
-        using StreamWriter writer = new StreamWriter(archivo, true);
-        writer.WriteLine($"{contacto.Nombre}|{contacto.NumeroTelefono}|{contacto.CorreoElectronico}");
-        writer.WriteLine(separadorContactos);
-    } 
 }
 
 class Program
 {
     static void Main()
     {
-        Sistema.CargarDatos();
+        string archivo = "contactos.txt";
+        string separadorContactos = "-";
+        Archivo.CargarDatos(archivo, separadorContactos);
 
         int opcion;
 
@@ -117,7 +112,7 @@ class Program
             Console.WriteLine("============= Menú =============");
             Console.WriteLine("1. Agregar contacto.");
             Console.WriteLine("2. Mostrar todos los contactos.");
-            Console.WriteLine("3. Guardar y Salir.\n");
+            Console.WriteLine("3. Salir.\n");
             opcion = int.Parse(Console.ReadLine());
 
             switch (opcion)
@@ -143,23 +138,40 @@ class Program
         while (opcion != 3);
     }
 }
-/*public void GuardarDatos<T>(string archivo, T entidad) where T : class
+
+static class Archivo
 {
-    if (File.Exist(archivo))
+    public static void GuardarDatos<T>(string archivo, T entidad) where T : class
     {
-        using StreamWriter writer = new StreamWriter(archivo, true)
+        using StreamWriter writer = new StreamWriter(archivo, true);
         writer.WriteLine(entidad);
+        
+    }
+
+    public static void GuardarDatos<T>(string archivo, List<T> entidades) where T : class
+    {
+        using StreamWriter writer = new StreamWriter(archivo, true);
+        foreach (var entidad in entidades)
+        {
+            writer.WriteLine(entidad);
+        }
+    }
+
+    public static void CargarDatos(string archivo, string separador)
+    {
+        if (File.Exists(archivo))
+        {
+            using StreamReader reader = new StreamReader(archivo);
+
+            string linea;
+
+            while ((linea = reader.ReadLine()) != null)
+            {
+                string[] partes = linea.Split(separador);
+
+                Sistema.AgregarContacto(partes);
+            }
+            Console.WriteLine("Datos cargados correctamente.");
+        }
     }
 }
-
-public void GuardarDatos<T>(string archivo, List<T> entidades) where T : class
-{
-    if (File.Exist(archivo))
-    {
-        using StreamWriter writer = new StreamWriter(archivo, true)
-        foreach(var e in entidades)
-        {
-            writer.WriteLine(e);
-        } 
-    }
-}*/
