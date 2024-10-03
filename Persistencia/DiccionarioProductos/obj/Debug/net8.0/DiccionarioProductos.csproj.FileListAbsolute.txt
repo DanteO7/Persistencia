@@ -1,0 +1,15 @@
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\bin\Debug\net8.0\DiccionarioProductos.exe
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\bin\Debug\net8.0\DiccionarioProductos.deps.json
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\bin\Debug\net8.0\DiccionarioProductos.runtimeconfig.json
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\bin\Debug\net8.0\DiccionarioProductos.dll
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\bin\Debug\net8.0\DiccionarioProductos.pdb
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\DiccionarioProductos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\DiccionarioProductos.AssemblyInfoInputs.cache
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\DiccionarioProductos.AssemblyInfo.cs
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\DiccionarioProductos.csproj.CoreCompileInputs.cache
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\DiccionarioProductos.sourcelink.json
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\DiccionarioProductos.dll
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\refint\DiccionarioProductos.dll
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\DiccionarioProductos.pdb
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\DiccionarioProductos.genruntimeconfig.cache
+C:\Users\Dante\OneDrive\Escritorio\Nueva carpeta\Persistencia\Persistencia\DiccionarioProductos\obj\Debug\net8.0\ref\DiccionarioProductos.dll
