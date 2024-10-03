@@ -1,0 +1,15 @@
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\bin\Debug\net8.0\ContadorPalabras.exe
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\bin\Debug\net8.0\ContadorPalabras.deps.json
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\bin\Debug\net8.0\ContadorPalabras.runtimeconfig.json
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\bin\Debug\net8.0\ContadorPalabras.dll
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\bin\Debug\net8.0\ContadorPalabras.pdb
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\ContadorPalabras.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\ContadorPalabras.AssemblyInfoInputs.cache
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\ContadorPalabras.AssemblyInfo.cs
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\ContadorPalabras.csproj.CoreCompileInputs.cache
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\ContadorPalabras.sourcelink.json
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\ContadorPalabras.dll
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\refint\ContadorPalabras.dll
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\ContadorPalabras.pdb
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\ContadorPalabras.genruntimeconfig.cache
+C:\Users\Dante\source\repos\Persistencia\ContadorPalabras\obj\Debug\net8.0\ref\ContadorPalabras.dll
