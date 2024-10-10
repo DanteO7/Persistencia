@@ -4,9 +4,9 @@
     {
         static void Main()
         {
-            Biblioteca.CargarDatos(Biblioteca.ArchivoLibro, "-");
-            Biblioteca.CargarDatos(Biblioteca.ArchivoUsuario, "-");
-            Biblioteca.CargarDatos(Biblioteca.ArchivoPrestamo, "-");
+            Biblioteca.CargarDatos(Biblioteca.ArchivoLibro);
+            Biblioteca.CargarDatos(Biblioteca.ArchivoUsuario);
+            Biblioteca.CargarDatos(Biblioteca.ArchivoPrestamo);
 
             int opcion;
 
