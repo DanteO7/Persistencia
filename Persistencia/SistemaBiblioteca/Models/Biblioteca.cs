@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 
 namespace SistemaBiblioteca.Models
 {
@@ -132,46 +132,69 @@ namespace SistemaBiblioteca.Models
             writer.WriteLine(entidad);
         }
 
-        public static void CargarDatos(string archivo, string separador)
+        public static string LeerDatos(string archivo, string separador)
         {
             if (File.Exists(archivo))
             {
                 using StreamReader reader = new StreamReader(archivo);
 
                 string linea;
+                string cadenaArchivo = null;
 
                 while ((linea = reader.ReadLine()) != null)
                 {
-                    string[] partes = linea.Split(separador);
-
-                    if(archivo == "libros.txt")
-                    {
-                        Libro libro = new Libro(partes[0], partes[1], partes[2], int.Parse(partes[3]));
-                        Libros.Add(libro);
-                    }
-                    else if (archivo == "usuarios.txt")
-                    {
-                        Usuario usuario = new Usuario(linea);
-                        Usuarios.Add(usuario);
-                    }
-                    else
-                    {
-                        foreach(var libro in Libros)
-                        {
-                            if(libro.Codigo == partes[1])
-                            {
-                                foreach(var usuario in Usuarios)
-                                {
-                                    if(usuario.Nombre == partes[0])
-                                    {
-                                        Prestamo prestamo = new Prestamo(usuario, libro, DateTime.Parse(partes[2]));
-                                        usuario.AgregarPrestamo(prestamo);
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    cadenaArchivo += linea + "+";
                 }
+                return cadenaArchivo;
+            }
+            return null;
+        }
+
+        public static void CargarDatos(string archivo)
+        {
+            try
+            {
+                string cadenaArchivo = LeerDatos(archivo, "-");
+                if (cadenaArchivo == null)
+                {
+                    return;
+                }
+                switch (archivo)
+                {
+                    case "libros.txt":
+                        string[] libros = cadenaArchivo.Split("+");
+                        for (int i = 0; i < libros.Length - 1; i++)
+                        {
+                            string[] partes = libros[i].Split("-");
+                            Libro libro = new Libro(partes[0], partes[1], partes[2], int.Parse(partes[3]));
+                            Libros.Add(libro);
+                        }
+                        break;
+                    case "usuarios.txt":
+                        string[] usuarios = cadenaArchivo.Split("+");
+                        for (int i = 0; i < usuarios.Length; i++)
+                        {
+                            Usuario usuario = new Usuario(usuarios[i]);
+                            Usuarios.Add(usuario);
+                        }
+                        break;
+                    case "prestamos.txt":
+                        string[] prestamos = cadenaArchivo.Split("+");
+                        for (int i = 0; i < prestamos.Length - 1; i++)
+                        {
+                            string[] partes = prestamos[i].Split("-");
+                            var usuarioPrestamo = Usuarios.Find(u => u.Nombre == partes[0]);
+                            var libroPrestamo = Libros.Find(l => l.Codigo == partes[1]);
+
+                            Prestamo prestamo = new Prestamo(usuarioPrestamo, libroPrestamo, DateTime.Parse(partes[2]));
+                            usuarioPrestamo.AgregarPrestamo(prestamo);
+                        }
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al cargar datos desde {archivo}: {ex.Message}");
             }
         }
 
